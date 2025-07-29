@@ -45,7 +45,7 @@ export const products: Product[] = [
   {
     id: "6",
     name: "Renee's Shito (Sachet)",
-    price: 1.00,
+    price: 2.00,
     description: "Pepper, Shrimps, onion, garlic and natural Ghanaian spices",
     image: product6
   }
