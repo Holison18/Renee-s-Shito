@@ -3,8 +3,8 @@ import product1 from "@/assets/shito-product-1.png";
 import product2 from "@/assets/shito-product-2.png";
 import product3 from "@/assets/shito-product-3.png";
 import product4 from "@/assets/shito-product-4.png";
-import product5 from "@/assets/shito-product-2.png";
-import product6 from "@/assets/shito-product-3.png";
+import product5 from "@/assets/shito-product-7.png";
+import product6 from "@/assets/shito-product-6.png";
 
 export const products: Product[] = [
   {
@@ -37,15 +37,15 @@ export const products: Product[] = [
   },
   {
     id: "5",
-    name: "Family Size Shito",
-    price: 22.99,
+    name: "Renee's Shito (Sachet)",
+    price: 1.50,
     description: "Pepper, Shrimps, onion, garlic and natural Ghanaian spices",
     image: product5
   },
   {
-    id: "5",
-    name: "Family Size Shito",
-    price: 22.99,
+    id: "6",
+    name: "Renee's Shito (Sachet)",
+    price: 1.00,
     description: "Pepper, Shrimps, onion, garlic and natural Ghanaian spices",
     image: product6
   }

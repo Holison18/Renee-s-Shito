@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,11 +17,8 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product, onQuantityChange, currentQuantity }: ProductCardProps) => {
-  const [quantity, setQuantity] = useState(currentQuantity);
-
   const updateQuantity = (newQuantity: number) => {
     const validQuantity = Math.max(0, newQuantity);
-    setQuantity(validQuantity);
     onQuantityChange(product.id, validQuantity);
   };
 
@@ -54,20 +50,20 @@ const ProductCard = ({ product, onQuantityChange, currentQuantity }: ProductCard
             <Button
               variant="outline"
               size="icon"
-              onClick={() => updateQuantity(quantity - 1)}
+              onClick={() => updateQuantity(currentQuantity - 1)}
               className="h-8 w-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
               <Minus className="h-4 w-4" />
             </Button>
             
             <span className="text-lg font-semibold min-w-[2rem] text-center">
-              {quantity}
+              {currentQuantity}
             </span>
             
             <Button
               variant="outline"
               size="icon"
-              onClick={() => updateQuantity(quantity + 1)}
+              onClick={() => updateQuantity(currentQuantity + 1)}
               className="h-8 w-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
               <Plus className="h-4 w-4" />

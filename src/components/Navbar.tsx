@@ -10,8 +10,12 @@ const Navbar = ({ cartCount, onCartClick }: NavbarProps) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary text-secondary-foreground shadow-lg">
       <div className="container mx-auto px-5 py-4 flex items-center justify-between">
-        <div className="text-2xl font-bold tracking-wide">
-          RENEE
+        <div className="flex items-center">
+          <img
+            src="/src/assets/logo.png" // Replace with your logo file path
+            alt="Renee Logo"
+            className="max-h-12 w-auto" // Adjust max height to fit navbar, width scales naturally
+          />
         </div>
         
         <Button

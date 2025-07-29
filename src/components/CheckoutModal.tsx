@@ -120,7 +120,7 @@ const CheckoutModal = ({
 
   const handleWhatsAppOrder = () => {
     const message = createWhatsAppMessage();
-    const whatsappUrl = `http://wa.me/233503986624?text=${message}`;
+    const whatsappUrl = `https://wa.me/+1(603)814-9469?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -141,16 +141,18 @@ const CheckoutModal = ({
             <div className="flex justify-center space-x-4">
               <div className="border border-gray-200 rounded-lg p-4 w-1/2 flex flex-col items-center">
                 <img src="\src\assets\cashapp-logo.jpg" alt="CashApp" className="h-12 mb-2" />
-                <p className="text-center">Contact for payment: +1 (603) 824-5465</p>
+                <p className="text-center">Contact for payment:</p>
+                <p className="text-center">+1 (603) 814-9469</p>
               </div>
               <div className="border border-gray-200 rounded-lg p-4 w-1/2 flex flex-col items-center">
                 <img src="\src\assets\zelle-Symbol.jpg" alt="Zelle" className="h-12 mb-2" />
-                <p className="text-center">Contact for payment: +1 (603) 824-5465</p>
+                <p className="text-center">Contact for payment:</p>
+                <p className="text-center">+1 (603) 814-9469</p>
               </div>
             </div>
             
             <div className="text-center">
-              <p className="font-semibold text-foreground">Contact: +1 (603) 824-9565</p>
+              <p className="font-semibold text-foreground">Contact: +1 (603) 814-9469</p>
             </div>
             
             <div className="space-y-3">
