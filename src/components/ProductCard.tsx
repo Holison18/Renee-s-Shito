@@ -23,56 +23,56 @@ const ProductCard = ({ product, onQuantityChange, currentQuantity }: ProductCard
   };
 
   return (
-    <Card className="overflow-hidden border-accent hover:shadow-lg transition-all duration-300 bg-card">
-      <CardContent className="p-0">
-        <div className="aspect-square overflow-hidden">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-          />
+  <Card className="overflow-hidden border-accent hover:shadow-lg transition-all duration-300 bg-card">
+    <CardContent className="p-0">
+      <div className="aspect-square overflow-hidden">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+      
+      <div className="p-4 space-y-3">
+        <div className="text-2xl font-bold text-primary">
+          ${product.price.toFixed(2)}
         </div>
         
-        <div className="p-4 space-y-3">
-          <div className="text-2xl font-bold text-primary">
-            ${product.price.toFixed(2)}
-          </div>
+        <h3 className="font-semibold text-foreground text-lg">
+          {product.name}
+        </h3>
+        
+        <p className="text-muted-foreground text-sm">
+          {product.description}
+        </p>
+        
+        <div className="flex items-center justify-center space-x-3 pt-2">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => updateQuantity(currentQuantity - 1)}
+            className="h-8 w-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+          >
+            <Minus className="h-4 w-4" />
+          </Button>
           
-          <h3 className="font-semibold text-foreground text-lg">
-            {product.name}
-          </h3>
+          <span className="text-lg font-semibold min-w-[2rem] text-center">
+            {currentQuantity}
+          </span>
           
-          <p className="text-muted-foreground text-sm">
-            {product.description}
-          </p>
-          
-          <div className="flex items-center justify-center space-x-3 pt-2">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => updateQuantity(currentQuantity - 1)}
-              className="h-8 w-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            >
-              <Minus className="h-4 w-4" />
-            </Button>
-            
-            <span className="text-lg font-semibold min-w-[2rem] text-center">
-              {currentQuantity}
-            </span>
-            
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => updateQuantity(currentQuantity + 1)}
-              className="h-8 w-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            >
-              <Plus className="h-4 w-4" />
-            </Button>
-          </div>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => updateQuantity(currentQuantity + 1)}
+            className="h-8 w-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+          >
+            <Plus className="h-4 w-4" />
+          </Button>
         </div>
-      </CardContent>
-    </Card>
-  );
+      </div>
+    </CardContent>
+  </Card>
+);
 };
 
 export default ProductCard;
