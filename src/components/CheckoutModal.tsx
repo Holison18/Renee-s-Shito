@@ -140,12 +140,12 @@ const CheckoutModal = ({
             
             <div className="flex justify-center space-x-4">
               <div className="border border-gray-200 rounded-lg p-4 w-1/2 flex flex-col items-center">
-                <img src="\src\assets\cashapp-logo.jpg" alt="CashApp" className="h-12 mb-2" />
+                <img src="src/assets/cashapp-logo.jpg" alt="CashApp" className="h-12 mb-2" />
                 <p className="text-center">Contact for payment:</p>
                 <p className="text-center">+1 (603) 814-9469</p>
               </div>
               <div className="border border-gray-200 rounded-lg p-4 w-1/2 flex flex-col items-center">
-                <img src="\src\assets\zelle-Symbol.jpg" alt="Zelle" className="h-12 mb-2" />
+                <img src="src/assets/Zelle-Symbol.jpg" alt="Zelle" className="h-12 mb-2" />
                 <p className="text-center">Contact for payment:</p>
                 <p className="text-center">+1 (603) 814-9469</p>
               </div>
