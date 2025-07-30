@@ -122,7 +122,7 @@ const CheckoutModal = ({
 
   const handleWhatsAppOrder = () => {
     const message = createWhatsAppMessage();
-    const whatsappUrl = `https://wa.me/+1(603)814-9469?text=${message}`;
+    const whatsappUrl = `http://wa.me/233503986624?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 
