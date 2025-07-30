@@ -62,7 +62,7 @@ const Index = () => {
         {/* Products Section */}
         <section className="px-5 py-8">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-foreground mb-4">
+            <h1 className="text-4xl font-bold text-red-900 mb-4">
               Renee's Special Shito
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
