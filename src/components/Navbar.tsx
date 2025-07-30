@@ -1,5 +1,6 @@
 import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import reneeLogo from "@/assets/logo.png";
 
 interface NavbarProps {
   cartCount: number;
@@ -12,7 +13,7 @@ const Navbar = ({ cartCount, onCartClick }: NavbarProps) => {
       <div className="container mx-auto px-5 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="/src/assets/logo.png" // Replace with your logo file path
+            src={reneeLogo} // Replace with your logo file path
             alt="Renee Logo"
             className="max-h-12 w-auto" // Adjust max height to fit navbar, width scales naturally
           />
