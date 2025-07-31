@@ -7,8 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Product } from "./ProductCard";
 import jsPDF from "jspdf";
-import cashapp from "@/assets/cashapp-logo.jpg";
-import zelle from "@/assets/Zelle-Symbol.jpg";
+import cashappLogo from "@/assets/cashapp-logo.jpg";
+import zelleLogo from "@/assets/Zelle-Symbol.jpg";
 
 export interface CartItem {
   product: Product;
@@ -98,7 +98,7 @@ const CheckoutModal = ({
   };
 
   const createWhatsAppMessage = () => {
-    let message = "*New Order*\n\n";
+    let message = "*New Order from Renee's Special Shito*\n\n";
     message += "*Order Details:*\n";
     
     cartItems.forEach((item) => {
@@ -109,8 +109,8 @@ const CheckoutModal = ({
     message += "*Customer Information:*\n";
     message += `Customer Email: ${customerInfo.email}\n`;
     message += `Customer Contact: ${customerInfo.contact}\n`;
-    message += `Delivery ddress: ${customerInfo.address}\n\n`;
-
+    message += `Delivery Address: ${customerInfo.address}\n\n`;
+    
     if (includeDeliveryFee) {
       message += "*Delivery Fee: $13 (Interstate Delivery Paid)*\n\n";
     }
@@ -122,8 +122,37 @@ const CheckoutModal = ({
 
   const handleWhatsAppOrder = () => {
     const message = createWhatsAppMessage();
-    const whatsappUrl = `http://wa.me/16038149469?text=${message}`;
+    const whatsappUrl = `https://wa.me/16038249565?text=${message}`;
     window.open(whatsappUrl, '_blank');
+  };
+
+  const createEmailBody = () => {
+    let body = "Subject: New Order from Renee's Special Shito\n\n";
+    body += "Order Details:\n";
+    
+    cartItems.forEach((item) => {
+      body += `${item.product.name} x ${item.quantity} = $${(item.product.price * item.quantity).toFixed(2)}\n`;
+    });
+    
+    body += `\nTotal: $${totalAmount.toFixed(2)}\n\n`;
+    body += "Customer Information:\n";
+    body += `Email: ${customerInfo.email}\n`;
+    body += `Contact: ${customerInfo.contact}\n`;
+    body += `Address: ${customerInfo.address}\n\n`;
+    
+    if (includeDeliveryFee) {
+      body += "Delivery Fee: $13 (Interstate Delivery Paid)\n\n";
+    }
+    
+    body += "Please attach payment screenshots to validate your order.";
+    
+    return encodeURIComponent(body);
+  };
+
+  const handleEmailOrder = () => {
+    const emailBody = createEmailBody();
+    const emailUrl = `mailto:kobinaakofiholison@gmail.com?subject=New%20Order%20from%20Renee%27s%20Special%20Shito&body=${emailBody}`;
+    window.open(emailUrl, '_blank');
   };
 
   if (showConfirmation) {
@@ -142,23 +171,17 @@ const CheckoutModal = ({
             
             <div className="flex justify-center space-x-4">
               <div className="border border-gray-200 rounded-lg p-4 w-1/2 flex flex-col items-center">
-                <img src={cashapp} 
-                     alt="CashApp" 
-                     className="h-12 mb-2" />
-                <p className="text-center">Contact for payment:</p>
-                <p className="text-center">+1 (603) 814-9469</p>
+                <img src={cashappLogo} alt="CashApp" className="h-12 mb-2" />
+                <p className="text-center">Contact for payment: +1 (603) 824-5465</p>
               </div>
               <div className="border border-gray-200 rounded-lg p-4 w-1/2 flex flex-col items-center">
-                <img src={zelle} 
-                     alt="Zelle" 
-                     className="h-12 mb-2" />
-                <p className="text-center">Contact for payment:</p>
-                <p className="text-center">+1 (603) 814-9469</p>
+                <img src={zelleLogo} alt="Zelle" className="h-12 mb-2" />
+                <p className="text-center">Contact for payment: +1 (603) 824-5465</p>
               </div>
             </div>
             
             <div className="text-center">
-              <p className="font-semibold text-foreground">Contact: +1 (603) 814-9469</p>
+              <p className="font-semibold text-foreground">Contact: +1 (603) 824-9565</p>
             </div>
             
             <div className="space-y-3">
@@ -168,7 +191,12 @@ const CheckoutModal = ({
               >
                 Send Order via WhatsApp
               </Button>
-              
+              <Button 
+                onClick={handleEmailOrder} 
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+              >
+                Send Order via Email
+              </Button>
               <Button 
                 variant="outline" 
                 onClick={() => {

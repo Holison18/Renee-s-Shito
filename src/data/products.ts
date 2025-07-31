@@ -9,42 +9,42 @@ import product6 from "@/assets/shito-product-6.png";
 export const products: Product[] = [
   {
     id: "1",
-    name: "Renee's Shito (Big Size)",
-    price: 25.00,
-    description: "Shrimp and fish powder, onion, pepper, ginger, garlic.",
-    image: product1
-  },
-  {
-    id: "2",
-    name: "Renee's Shito (Medium Size)",
-    price: 15.00,
-    description: "Shrimp and fish powder, onion, pepper, ginger, garlic.",
-    image: product2
-  },
-  {
-    id: "3",
-    name: "Renee's Shito (Small Size)",
-    price: 12.00,
-    description: "Shrimp and fish powder, onion, pepper, ginger, garlic.",
-    image: product3
-  },
-  {
-    id: "4",
-    name: "Renee's Shito (Biggest Size)",
+    name: "Renee's Shito (1000mL)",
     price: 30.00,
     description: "Shrimp and fish powder, onion, pepper, ginger, garlic.",
     image: product4
   },
   {
+    id: "2",
+    name: "Renee's Shito (750mL)",
+    price: 25.00,
+    description: "Shrimp and fish powder, onion, pepper, ginger, garlic.",
+    image: product1
+  },
+  {
+    id: "3",
+    name: "Renee's Shito (500mL)",
+    price: 15.00,
+    description: "Shrimp and fish powder, onion, pepper, ginger, garlic.",
+    image: product2
+  },
+  {
+    id: "4",
+    name: "Renee's Shito (350mL)",
+    price: 12.00,
+    description: "Shrimp and fish powder, onion, pepper, ginger, garlic.",
+    image: product3
+  },
+  {
     id: "5",
-    name: "Renee's Shito (Sachet)",
+    name: "Renee's Shito Sachect Small (60g)",
     price: 1.00,
     description: "Shrimp and fish powder, onion, pepper, ginger, garlic.",
     image: product5
   },
   {
     id: "6",
-    name: "Renee's Shito (Sachet)",
+    name: "Renee's Shito Sachect Large (100g)",
     price: 2.00,
     description: "Shrimp and fish powder, onion, pepper, ginger, garlic.",
     image: product6
