@@ -122,7 +122,7 @@ const CheckoutModal = ({
 
   const handleWhatsAppOrder = () => {
     const message = createWhatsAppMessage();
-    const whatsappUrl = `https://wa.me/16038249565?text=${message}`;
+    const whatsappUrl = `https://wa.me/16038149469?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -156,7 +156,7 @@ const CheckoutModal = ({
   };
 
   if (showConfirmation) {
-    const nbText = "Interstate delivery fee is 13 dollars and hence if the customer wants their product delivered to them, they should add the delivery fee. Also, payment validates orders. User should use the details there to make the payment and click on the button to send screenshots of payments to Renee to validate order.";
+    const nbText = "Interstate delivery fee is 13 dollars and hence if the customer wants their product delivered to them, they should add the delivery fee. Also, payment validates orders. User should use the details below to make the payment and click on the button to send screenshots of payments to Renee to validate order.";
 
     return (
       <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
