@@ -27,7 +27,7 @@ const Navbar = ({ cartCount, onCartClick }: NavbarProps) => {
         >
           <ShoppingCart className="h-6 w-6 text-white" />
           {cartCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-cart-badge text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+            <span className="absolute -top-2 -right-2 bg-black text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
               {cartCount}
             </span>
           )}
