@@ -1,10 +1,10 @@
 import { Product } from "@/components/ProductCard";
-import product1 from "@/assets/shito-product-1.png";
-import product2 from "@/assets/shito-product-2.png";
-import product3 from "@/assets/shito-product-3.png";
-import product4 from "@/assets/shito-product-4.png";
-import product5 from "@/assets/shito-product-7.png";
-import product6 from "@/assets/shito-product-6.png";
+import product1 from "@/assets/shito-product-21.jpg";
+import product2 from "@/assets/shito-product-31.jpg";
+import product3 from "@/assets/shito-product-51.jpg";
+import product4 from "@/assets/shito-product-11.jpg";
+import product5 from "@/assets/shito-product-61.jpg";
+import product6 from "@/assets/shito-product-71.jpg";
 
 export const products: Product[] = [
   {
