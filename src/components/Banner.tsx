@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import banner1 from "@/assets/banner-1.jpg";
+import banner1 from "@/assets/banner-1.png";
 import banner2 from "@/assets/banner-2.jpg";
-import banner3 from "@/assets/banner-3.jpg";
+import banner3 from "@/assets/banner-3.png";
 
 const bannerImages = [
   { src: banner1, alt: "Spicy Shito Sauce Collection" },
