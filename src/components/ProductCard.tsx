@@ -35,7 +35,7 @@ const ProductCard = ({ product, onQuantityChange, currentQuantity }: ProductCard
       
       <div className="p-4 space-y-3">
         <div className="text-2xl font-bold text-primary">
-          ${product.price.toFixed(2)}
+          GH₵{product.price.toFixed(2)}
         </div>
         
         <h3 className="font-semibold text-foreground text-lg">

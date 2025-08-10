@@ -122,7 +122,7 @@ const CheckoutModal = ({
 
   const handleWhatsAppOrder = () => {
     const message = createWhatsAppMessage();
-    const whatsappUrl = `https://wa.me/16038149469?text=${message}`;
+    const whatsappUrl = `https://wa.me/233541812762?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -151,7 +151,7 @@ const CheckoutModal = ({
 
   const handleEmailOrder = () => {
     const emailBody = createEmailBody();
-    const emailUrl = `mailto:reneesspecialshito@gmail.com?subject=New%20Order%20from%20Renee%27s%20Special%20Shito&body=${emailBody}`;
+    const emailUrl = `mailto:kobinaakofiholison@gmail.com?subject=New%20Order%20from%20Renee%27s%20Special%20Shito&body=${emailBody}`;
     window.open(emailUrl, '_blank');
   };
 
